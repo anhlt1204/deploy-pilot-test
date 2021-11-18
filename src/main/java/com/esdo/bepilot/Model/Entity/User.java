@@ -36,7 +36,6 @@ public class User {
     @Column(columnDefinition = "VARCHAR(100)")
     private String phone;
 
-    @Column(columnDefinition = "Text(20)")
     private BigDecimal amountMoneyReceive;
 
     @Column
@@ -45,7 +44,6 @@ public class User {
     @Column
     private BigDecimal moneyRemaining;
 
-    @Column(columnDefinition = "Int(20)")
     private int numberOfMissionDone;
 
     @OneToMany(mappedBy = "user")
@@ -53,7 +51,5 @@ public class User {
 
     @OneToMany(mappedBy = "users",cascade = CascadeType.ALL)
     private List<MissionDetail> missionDetailList;
-
-
 
 }
